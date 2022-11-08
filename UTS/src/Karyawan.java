@@ -7,6 +7,15 @@ public class Karyawan {
     private int tahun_masuk;
     private int nip;
     private int gaji;
+    private int total;
+
+    public int getTotal() {
+        return total;
+    }
+
+    public void setTotal(int total) {
+        this.total = total;
+    }
 
     public String getNama() {
         return nama;
@@ -64,9 +73,12 @@ public class Karyawan {
         this.gaji = gaji;
     }
 
-    public int hitung(int a){
+    public void hitung(int gaji){
         System.out.println("-");
-        return a;
+    }
+
+    public void cetak(){
+        System.out.println("-");
     }
 
 }

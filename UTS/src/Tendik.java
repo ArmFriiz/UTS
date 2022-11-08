@@ -10,15 +10,21 @@ public class Tendik extends Karyawan{
     }
 
     @Override
-    public int hitung(int a) {
+    public void hitung(int gaji) {
 //        super.hitung(a);
-        int total=a;
-        return total;
+        setTotal(gaji);
     }
 
-    public int hitung(int a, int jam_kerja, int normal) {
+    public void hitung(int a, int jam_kerja, int normal) {
         int lebih=jam_kerja-normal;
-        int total=a+(lebih*50000);
-        return total;
+        setTotal(a+(lebih*50000));
+    }
+
+    @Override
+    public void cetak() {
+//        super.cetak();
+        System.out.println(" NIP Tendik        : "+getNip());
+        System.out.println(" Nama Tendik       : "+getNama());
+        System.out.println(" Total Gaji Tendik : "+getTotal());
     }
 }

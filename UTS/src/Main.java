@@ -14,7 +14,6 @@ public class Main {
         int tahun_masuk;
         int nip;
         int gaji;
-        int total;
 
         Scanner in=new Scanner(System.in);
 
@@ -88,11 +87,15 @@ public class Main {
             dosen1.setSks(sks);
 
             if(sks>normal){
-                total=dosen1.hitung(dosen1.getGaji(), sks, normal);
+                dosen1.hitung(dosen1.getGaji(), sks, normal);
 //                System.out.println(total);
             }else {
-                total=dosen1.hitung(dosen1.getGaji());
+                dosen1.hitung(dosen1.getGaji());
             }
+
+            System.out.println();
+
+            dosen1.cetak();
                 break;
 
             case 2:
@@ -143,10 +146,14 @@ public class Main {
             System.out.print(" Total Jam Kerja                : ");
             jam_kerja= in.nextInt();
             if(jam_kerja>normal){
-                total=tendik1.hitung(tendik1.getGaji(), jam_kerja, normal);
+                tendik1.hitung(tendik1.getGaji(), jam_kerja, normal);
             }else{
-                total=tendik1.hitung(tendik1.getGaji());
+                tendik1.hitung(tendik1.getGaji());
             }
+
+            System.out.println();
+
+            tendik1.cetak();
                 break;
 
             default:

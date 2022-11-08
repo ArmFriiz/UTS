@@ -28,15 +28,23 @@ public class Dosen extends Karyawan{
     }
 
     @Override
-    public int hitung(int a) {
+    public void hitung(int gaji) {
 //        super.hitung(a);
-        int total=a;
-        return total;
+       setTotal(gaji);
     }
 
-    public int hitung(int a, int sks, int normal) {
+    public void hitung(int a, int sks, int normal) {
         int lebih=sks-normal;
-        int total=a+(lebih*100000);
-        return total;
+        setTotal(a+(lebih*100000));
+    }
+
+    @Override
+    public void cetak() {
+//        super.cetak();
+        System.out.println(" NIP Dosen        : "+getNip());
+        System.out.println(" NIDN Dosen       : "+getNidn());
+        System.out.println(" Nama Dosen       : "+getNama());
+        System.out.println(" Jurusan          : "+getJurusan());
+        System.out.println(" Total Gaji Dosen : "+getTotal());
     }
 }
